@@ -1,4 +1,4 @@
-let friends = ['enexes', 'Gatekeeper Fappy', 'Gobuta', 'Jumbo']
+let friends = ['enexes', 'Gatekeeper Fappy', 'Gobuta', 'Down Horribly']
 
 let header = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36",
@@ -17,6 +17,7 @@ export async function getPlayerData(key) {
                     return rankData
                 })
             return playerInfo
+            return { data: playerInfo }
         })
     )
 
