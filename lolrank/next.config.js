@@ -3,4 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+// const withImages =require('next/image')
+
+module.exports = {
+  nextConfig,
+  // withImages,
+}

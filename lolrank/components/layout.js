@@ -2,20 +2,17 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+// css
+import styles from "../styles/Layout.module.css"
 // components
+import Header from "./header";
 import Footer from "./footer";
 
 export const siteTitle = "LoL Rank";
-export const friends = {
-    fernando: "enexes",
-    david: "Gatekeeper Fappy",
-    jumbo: "Jvmbo",
-    michael: "Gobuta",
-};
 
 export default function Layout({ children, home }) {
     return (
-        <div>
+        <div className={styles.layoutComponent}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content={siteTitle} />
@@ -24,9 +21,9 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="description" content="Friend's ranked tracker for season 13"/>
             </Head>
+            <Header/>
             {/* <h1>Yachi&apos;s Corner</h1> */}
-            <h1>LoL & Friends <br/> Season 13 Ranked Boards</h1>
-            <main>{children}</main>
+            <main className={styles.childrenContainer}>{children}</main>
             <Footer/>
         </div>
     )
